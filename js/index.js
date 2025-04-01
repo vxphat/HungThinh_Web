@@ -1,27 +1,20 @@
-// Xử lý gửi form
+// Lấy phần tử header
+const header = document.querySelector("header");
+// Biến lưu vị trí cuộn trước đó
+let lastScroll = 0;
 
-document.getElementById("userForm");
-document.addEventListener("submit", function (e) {
-  e.preventDefault();
+window.addEventListener("scroll", () => {
+  // Lấy vị trí cuộn hiện tại
+  const currentScroll = window.scrollY;
 
-  // Lấy dữ liệu từ form
-  const formData = new FormData(this);
+  if (currentScroll > lastScroll && currentScroll > 0) {
+    // Cuộn xuống: ẩn header
+    header.classList.add("header-hidden");
+  } else if (currentScroll < lastScroll) {
+    // Cuộn lên 1 nấc: hiện header
+    header.classList.remove("header-hidden");
+  }
 
-  // Gửi dữ liệu đến Google Apps Script (sẽ cập nhật URL sau)
-  fetch(
-    "https://script.google.com/macros/s/AKfycbytUaAzQqsisctICQYAf5pqNRRAk7AdQVNZ1mFTu9bj3Gp6TaUglk-r5OhO2lop4RTa/exec",
-    {
-      method: "POST",
-      body: formData,
-    }
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      alert("Gửi thông tin thành công!");
-      this.reset(); // Xóa dữ liệu form sau khi gửi
-    })
-    .catch((error) => {
-      console.error("Lỗi:", error);
-      alert("Có lỗi xảy ra, vui lòng thử lại!");
-    });
+  // Cập nhật vị trí cuộn trước đó
+  lastScroll = currentScroll;
 });

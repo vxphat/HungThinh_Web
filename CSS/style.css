@@ -134,6 +134,18 @@ header {
     z-index: 100;
     background-color: var(--bgColor);
     width: 100%;
+    transition: all 0.5s ease;
+}
+
+.fixed-top {
+    /* top: 40px; */
+    width: 100vw;
+}
+
+.header-hidden {
+    transform: translateY(-100%);
+    transition: all 0.5s ease;
+
 }
 
 .header__nav .navbar-nav {
@@ -921,6 +933,12 @@ footer {
     font-weight: 700;
     font-family: "Muli", sans-serif;
     line-height: 1.2;
+}
+
+.aboutUs .inner h3 {
+    padding: 5px 10px;
+    background-color: #A60321;
+
 }
 
 
