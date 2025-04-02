@@ -80,11 +80,12 @@
 
 html,
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Afacad", sans-serif;
     position: relative;
     color: var(--colorText);
     line-height: 1.5;
     background-color: var(--bgColor);
+    font-size: 18px;
 }
 
 a {
@@ -153,14 +154,14 @@ header {
 }
 
 .header__nav img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 .header__nav .navbar-nav .nav-link {
     color: var(--colorText);
     padding: 0px 20px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     transition: all .5s;
     font-weight: 600;
@@ -217,20 +218,20 @@ header {
 }
 
 .carousel-item:nth-child(1) {
-    background-image: url(../image/17050.jpg);
+    background-image: url(../image/3130.jpg);
 
 }
 
 .carousel-item:nth-child(2) {
-    background-image: url(../image/2498.jpg);
+    background-image: url(../image/3131.jpg);
 }
 
 .carousel-item:nth-child(3) {
-    background-image: url(../image/25060.jpg);
+    background-image: url(../image/3132.jpg);
 }
 
 .carousel-item:nth-child(4) {
-    background-image: url(../image/people-1979261_1920-1200x800.jpg);
+    background-image: url(../image/3133.jpg);
 }
 
 
@@ -262,44 +263,6 @@ header {
 }
 
 
-/* .carousel-item .item_1{
-    position: absolute;
-    top: 45%;
-    left: 30%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    color: #ffffff;
-} */
-
-/* .carousel-item .item_2{
-    position: absolute;
-    top: 45%;
-    left: 30%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    color: #ffffff;
-}
-
-.carousel-item .item_3{
-    position: absolute;
-    top: 40%;
-    left: 35%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    color: #ffffff;
-}
-
-.carousel-item .item_4{
-    position: absolute;
-    top: 45%;
-    left: 30%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    color: #ffffff;
-} */
-
-
-
 .carousel__caption img {
     width: 140px;
     border-radius: 50%;
@@ -327,47 +290,18 @@ header {
     animation-delay: 2s;
 }
 
-
-.btn-grad {
-    background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%)
-}
-
-.btn-grad {
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    display: block;
-}
-
-.btn-grad:hover {
-    background-position: right center;
-    /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
-}
-
 .about-image-wrapper {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #D9042B; */
     height: 500px;
-    /* Giữ chiều cao cố định */
 }
 
 .about-image-wrapper img {
     width: 400px;
-    /* Đặt kích thước cố định để hình tròn đều */
     height: 400px;
-    /* Đặt cùng giá trị với width để tạo hình tròn hoàn hảo */
     object-fit: cover;
     z-index: 2;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -377,14 +311,10 @@ header {
 .red-blob {
     position: absolute;
     width: 450px;
-    /* Lớn hơn hình tròn một chút */
     height: 450px;
     background-color: #D9042B;
-    /* Màu đỏ giống background */
     z-index: 1;
-    /* Đặt sau hình tròn */
     animation: blobAnimation 6s ease-in-out infinite;
-    /* Áp dụng animation */
 }
 
 @keyframes blobAnimation {
@@ -491,6 +421,7 @@ header {
 
 .btn-gradient:hover {
     background-position: right center;
+    color: var(--colorTitleH2);
 }
 
 .register {
@@ -881,6 +812,14 @@ footer {
     display: flex;
 }
 
+.banner__aboutUs {
+    background-image: url(../image/aerial-view-business-team.jpg);
+}
+
+.banner__contact {
+    background-image: url(../image/banner_red.jpg);
+}
+
 .banner .title h2 {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -893,9 +832,13 @@ footer {
 
 .aboutUs .img img {
     width: 100%;
-    height: 100%;
-    background-size: cover;
+    max-height: 450px;
+    /* max-width: 500px; */
+    background-size: auto;
     background-position: center;
+    border-radius: 10px;
+    /* object-fit: cover; */
+    display: block;
 }
 
 .aboutUs .content__right {
@@ -912,10 +855,6 @@ footer {
     left: -80px;
     text-align: center !important;
 
-}
-
-.aboutUs .content__left p:last-child {
-    padding-right: 60px;
 }
 
 
@@ -935,10 +874,46 @@ footer {
     line-height: 1.2;
 }
 
+.aboutUs .inner {
+    max-height: 450px;
+    margin-bottom: 20px;
+}
+
 .aboutUs .inner h3 {
     padding: 5px 10px;
     background-color: #A60321;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    text-align: center;
+    color: var(--bgColor);
+    background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
 
+}
+
+
+/* ---------Contact Page---------- */
+
+.contact__content {
+    padding: 40px;
+}
+
+.contact__content ul {
+    padding-left: 0;
+}
+
+.contact__content .contact__info ion-icon {
+    color: var(--colorSecondary);
+    font-size: 25px;
+}
+
+.contact__content .contact__info p {
+    vertical-align: middle;
+}
+
+.contact__content .contact__left h2 {
+    margin-bottom: 30px;
+    font-size: 50px;
+    color: var(--colorSecondary);
 }
 
 
