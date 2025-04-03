@@ -186,7 +186,7 @@
 
   <!-- FOOTER -->
   <footer class="pt-5 m-0">
-    <div class="footer__top pb-5">
+    <div class="footer__top">
       <div class="container py-lg-3">
         <div class="footer__content">
           <div class="row">
@@ -295,13 +295,16 @@
   </footer>
 
   <div class="bottom_tab">
-    <a class="tab zalo nutrition__icon" href="https://zalo.me/0967902106" target="_blank title=" Zalo">
-      <img src="./image/logo/Zalo.svg" style="width: 50px; height: 50px" alt="" />
+    <a class="tab zalo nutrition__icon" href="https://zalo.me/0967902106" target="_blank title="Zalo">
+      <img
+        src="./image/logo/Zalo.svg"
+        alt="" />
     </a>
-    <a class="tab facebook nutrition__icon" href="#" target="_blank title=" Facebook">
-      <img src="./image/logo/messeger.svg" style="width: 50px; height: 50px" alt="" />
+    <a class="tab facebook nutrition__icon" href="#" target="_blank title="Facebook">
+      <img
+        src="./image/logo/messeger.svg"
+        alt="" />
     </a>
-
   </div>
 
   <script src="./js/index.js"></script>
@@ -316,7 +319,69 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
+<!-- Thêm EmailJS library -->
+<script
+type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<!-- Script xử lý form -->
+<script type="text/javascript">
+// Khởi tạo EmailJS
+(function () {
+  emailjs.init("w9desu-3kuo8EAUKU"); // Thay bằng Public Key từ EmailJS
+})();
+
+document
+  .getElementById("userForm")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Lấy dữ liệu từ form
+    const formData = new FormData(this);
+    const jsonData = {
+      name: this.name.value,
+      address: this.address.value,
+      phone: this.phone.value,
+      zone: this.zone.value,
+      timestamp: new Date().toLocaleString(),
+    };
+
+    // Hàm gửi dữ liệu lên Google Sheet
+    const sendToGoogleSheet = fetch(
+      "https://script.google.com/macros/s/AKfycbxJ1PxLVSRrFi2WK-VgHEPHbCvblPY49BcGNO3WkxGpQBwhNfGYZc3hkv8Wc8Ry4WdzlQ/exec", // Thay bằng URL Web app từ Google Apps Script
+      {
+        method: "POST",
+        body: formData,
+      }
+    ).then((response) => response.json());
+
+    // Hàm gửi email qua EmailJS
+    const sendEmail = emailjs.send(
+      "service_7rd7ema", // Thay bằng Service ID từ EmailJS
+      "template_8zyykh6", // Thay bằng Template ID từ EmailJS
+      jsonData
+    );
+
+    // Thực hiện cả hai tác vụ cùng lúc và xử lý kết quả
+    Promise.all([sendToGoogleSheet, sendEmail])
+      .then(([sheetResponse, emailResponse]) => {
+        if (
+          sheetResponse.result === "success" &&
+          emailResponse.status === 200
+        ) {
+          alert("Gửi thông tin thành công!");
+          this.reset(); // Reset form
+          $("#staticBackdrop").modal("hide"); // Đóng modal
+        } else {
+          throw new Error("Một trong hai tác vụ thất bại");
+        }
+      })
+      .catch((error) => {
+        console.error("Lỗi:", error);
+        alert("Có lỗi xảy ra, vui lòng thử lại!");
+      });
+  });
+</script>
 
   <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>

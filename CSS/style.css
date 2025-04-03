@@ -85,7 +85,7 @@ body {
     color: var(--colorText);
     line-height: 1.5;
     background-color: var(--bgColor);
-    font-size: 18px;
+    font-size: 20px;
 }
 
 a {
@@ -288,6 +288,10 @@ header {
     /* animation-name: fadeInUp; */
     animation-duration: 1s;
     animation-delay: 2s;
+}
+
+#about p {
+    text-align: justify;
 }
 
 .about-image-wrapper {
@@ -578,7 +582,7 @@ header {
 
 .services__item {
     color: #ffffff;
-    padding: 40px 40px;
+    padding: 30px 30px;
     backdrop-filter: blur(3px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.1);
@@ -621,7 +625,9 @@ header {
 }
 
 .services__item p {
-    font-size: 16px;
+    font-size: 18px;
+    text-align: justify;
+
 }
 
 .services .title p {
@@ -675,6 +681,11 @@ header {
 
 .contact__right {
     padding: 45px 0;
+}
+
+.contact__right p,
+.contact__item p {
+    text-align: justify;
 }
 
 /* FOOTER */
@@ -755,8 +766,8 @@ footer {
 }
 
 .footer__content .mail .btn-gradient {
-    margin-left: 10px;
-    padding: 10px 25px;
+    margin-left: 5px;
+    padding: 15px 30px;
     white-space: nowrap;
     /* Ngăn button xuống dòng */
 }
@@ -768,8 +779,13 @@ footer {
     right: 20px;
     bottom: 20px;
     transition: all 0.5s;
-    /* visibility: hidden; */
 }
+
+.bottom_tab .tab img {
+    width: 50px;
+    height: 50px;
+}
+
 
 .bottom_tab .zalo {
     right: 25px;
@@ -779,6 +795,7 @@ footer {
     height: 50px;
     line-height: 50px;
     border-radius: 50%;
+    z-index: 999;
 }
 
 .bottom_tab .facebook {
@@ -787,8 +804,9 @@ footer {
     animation: ripple 1s linear infinite;
     width: 50px;
     height: 50px;
-    line-height: 49px;
+    line-height: 47px;
     border-radius: 50%;
+    z-index: 999;
 }
 
 
@@ -870,8 +888,12 @@ footer {
 }
 
 .aboutUs .inner {
-    max-height: 450px;
-    margin-bottom: 20px;
+    max-height: 520px;
+    margin-bottom: 30px;
+}
+
+.aboutUs .inner p {
+    text-align: justify;
 }
 
 .aboutUs .inner h3 {
@@ -1144,8 +1166,6 @@ footer {
         height: 40px;
     }
 
-
-
     .header__nav .navbar-nav .nav-link {
         font-size: 18px;
         /* Giảm kích thước chữ */
@@ -1263,7 +1283,7 @@ footer {
 
     /* Footer */
     .footer__content h3 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .mail {
@@ -1281,12 +1301,31 @@ footer {
     .mail .btn-gradient {
         /* width: 100%; */
         /* Button chiếm toàn chiều rộng */
-        padding: 15px 10px;
+        padding: 30px 10px;
         font-size: 14px;
     }
 
     .footer-social ul {
         justify-content: center !important;
+    }
+
+    .bottom_tab .tab img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bottom_tab .zalo {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .bottom_tab .facebook {
+        bottom: 200px;
+        width: 40px;
+        height: 40px;
+        line-height: 37px;
+
     }
 
     .aboutUs .inner {
@@ -1429,7 +1468,7 @@ footer {
     }
 
     .services__item p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     /* Contact */
