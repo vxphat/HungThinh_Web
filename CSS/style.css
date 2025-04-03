@@ -740,8 +740,13 @@ footer {
     border-top: 1px solid rgba(105, 105, 105, 0.1);
 }
 
-.footer__bottom span {
+.footer__bottom p {
     color: var(--title-p-color);
+}
+
+.footer__bottom p span {
+    color: var(--colorSecondary);
+    font-weight: 600;
 }
 
 .footer__content .mail {
@@ -1307,6 +1312,10 @@ footer {
 
     .footer-social ul {
         justify-content: center !important;
+    }
+
+    .footer__bottom p {
+        font-size: 18px;
     }
 
     .bottom_tab .tab img {
