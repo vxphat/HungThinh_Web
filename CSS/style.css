@@ -1094,6 +1094,45 @@ footer {
         justify-content: center !important;
         /* Căn giữa icon mạng xã hội */
     }
+
+    /* Banner */
+    .banner {
+        height: 400px;
+        /* Giảm chiều cao banner */
+    }
+
+    .banner .title h2 {
+        font-size: 50px;
+        /* Giảm kích thước chữ */
+    }
+
+    /* Section About Us */
+    .section__inner {
+        margin: 60px 0;
+        /* Giảm margin */
+    }
+
+    .aboutUs .inner {
+        max-height: none;
+        /* Bỏ giới hạn chiều cao để nội dung tự mở rộng */
+        margin-bottom: 40px;
+        /* Tăng khoảng cách giữa các section */
+    }
+
+    .aboutUs .content__left h3 {
+        font-size: 24px;
+    }
+
+    .aboutUs .content__left p.lead {
+        font-size: 16px;
+    }
+
+    .aboutUs .img img {
+        max-height: 350px;
+        /* Giảm chiều cao ảnh */
+        margin: 0 auto;
+        /* Căn giữa ảnh */
+    }
 }
 
 @media screen and (max-width: 575.85px) {
@@ -1147,20 +1186,27 @@ footer {
 
     /* About */
     .about-image-wrapper {
-        height: 300px;
+        height: 350px;
     }
 
     .about-image-wrapper img {
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
     }
 
     .red-blob {
-        width: 270px;
-        height: 270px;
+        width: 320px;
+        height: 320px;
+    }
+
+    .about a button {
+        padding: 0;
     }
 
     /* Projects */
+    .project {
+        padding: 30px 0;
+    }
 
     .projects__content .nav-link {
         padding: 0.5rem;
@@ -1178,6 +1224,7 @@ footer {
     /* Services */
     .services__item {
         padding: 20px;
+
     }
 
     .services__item h3 {
@@ -1185,7 +1232,18 @@ footer {
     }
 
     .services__item p {
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    .services .register {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 7px;
+    }
+
+    .services .register button {
+        padding: 20px 30px;
     }
 
     /* Contact */
@@ -1209,27 +1267,95 @@ footer {
     }
 
     .mail {
-        flex-direction: column;
+        flex-direction: row;
         /* Chuyển thành cột */
-        align-items: stretch;
+        /* align-items: stretch; */
         /* Đảm bảo các phần tử chiếm toàn chiều rộng */
     }
 
     .mail input {
-        margin-right: 0;
-        margin-bottom: 10px;
         /* Khoảng cách giữa input và button */
+        width: 90%;
     }
 
     .mail .btn-gradient {
-        width: 100%;
+        /* width: 100%; */
         /* Button chiếm toàn chiều rộng */
-        padding: 10px;
+        padding: 15px 10px;
         font-size: 14px;
     }
 
     .footer-social ul {
         justify-content: center !important;
+    }
+
+    .aboutUs .inner {
+        margin-bottom: 30px;
+        /* Giảm khoảng cách giữa các section */
+    }
+
+    .about .inner .content__left {
+        max-height: 500px;
+        width: auto;
+    }
+
+    .about .inner .content__right {
+        max-height: 500px;
+        width: auto;
+    }
+
+    /* Banner */
+    .banner {
+        height: 30vh;
+    }
+
+    .banner .title h2 {
+        font-size: 36px;
+    }
+
+    /* Section About Us */
+    .section__inner {
+        margin: 40px 0;
+    }
+
+    .aboutUs .inner {
+        margin-bottom: 30px;
+        /* Giảm khoảng cách giữa các section */
+    }
+
+    .aboutUs .content__left h3 {
+        font-size: 20px;
+        text-align: center;
+        /* Căn giữa tiêu đề */
+    }
+
+    .aboutUs .content__left p.lead,
+    .aboutUs .content__right p.lead {
+        font-size: 1.1rem;
+        text-align: justify;
+        /* Căn đều nội dung */
+    }
+
+    .aboutUs .content__left h3,
+    .aboutUs .content__right h3 {
+        font-size: 1.25rem;
+    }
+
+
+    .aboutUs .img img {
+        max-height: 250px;
+        /* Giảm chiều cao ảnh */
+    }
+
+    /* Đảm bảo nội dung và ảnh xếp chồng */
+    .aboutUs .content__left,
+    .aboutUs .content__right {
+        width: 100%;
+        max-height: none;
+    }
+
+    .contact_page__content {
+        padding: 10px;
     }
 }
 
@@ -1295,7 +1421,7 @@ footer {
 
     /* Services */
     .services__item {
-        padding: 15px;
+        padding: 10px;
     }
 
     .services__item h3 {
@@ -1339,6 +1465,37 @@ footer {
     .footer-social img {
         width: 20px;
         height: 20px;
+    }
+
+    /* Banner */
+    .banner {
+        height: 250px;
+    }
+
+    .banner .title h2 {
+        font-size: 28px;
+    }
+
+    /* Section About Us */
+    .section__inner {
+        margin: 30px 0;
+    }
+
+    .aboutUs .inner {
+        margin-bottom: 20px;
+    }
+
+    .aboutUs .content__left h3 {
+        font-size: 18px;
+    }
+
+    .aboutUs .content__left p.lead {
+        font-size: 12px;
+    }
+
+    .aboutUs .img img {
+        max-height: 200px;
+        /* Giảm chiều cao ảnh tối đa */
     }
 }
 
