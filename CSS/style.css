@@ -6,6 +6,9 @@
     --colorTitleH2: #1a1d2d;
     --colorP: #585858;
     --bgColorFooter: #F2C0A2;
+    --colorBtn1: #FF512F;
+    --colorBtn2: #DD2476;
+
 }
 
 /* Color Theme Swatches in Hex */
@@ -128,10 +131,6 @@ li {
 
 /* HEADER */
 header {
-    /* position: absolute;
-    top: 0;
-    left: 0; */
-    /* transform: translateX(-100%); */
     z-index: 100;
     background-color: var(--bgColor);
     width: 100%;
@@ -259,7 +258,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #ffffff;
+    color: var(--bgColor);
 }
 
 
@@ -316,7 +315,7 @@ header {
     position: absolute;
     width: 450px;
     height: 450px;
-    background-color: #D9042B;
+    background-color: var(--colorSecondary);
     z-index: 1;
     animation: blobAnimation 6s ease-in-out infinite;
 }
@@ -345,9 +344,8 @@ header {
 }
 
 .projects__content .nav-pills .nav-link {
-    /* border: 1px solid #1a1d2d; */
     margin: 0 5px;
-    color: #585858;
+    color: var(--colorP);
     padding: 10px 20px;
     font-size: 18px;
     border-radius: 10px;
@@ -365,24 +363,14 @@ header {
     visibility: visible;
 }
 
-/* .projects__item .card-img-top{
-    border-radius: 15px 15px 0 0;
-} */
 .projects__item {
     border: 1px solid transparent;
     border-radius: 1rem;
     transition: all 0.5s;
-    /* height: 125px; */
 }
-
-/* .projects__item .card-body{
-    padding: 0 1rem;
-    
-} */
 
 .projects__item:hover {
     border: 1px solid var(--colorPrimary);
-    /* border-top: 0; */
 }
 
 .projects__item .card-title {
@@ -392,24 +380,14 @@ header {
     color: var(--colorPrimary);
 }
 
-.projects__item .card-title span {
-    color: #35a22c;
-}
-
-/* .projects__item:hover .card-title{
-    color: #35a22c;
-} */
-
-
 .projects__item .card-text {
-    /* margin-bottom: 1rem; */
     color: var(--colorText);
     font-size: 16px;
     justify-content: center;
 }
 
 .btn-gradient {
-    background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+    background-image: linear-gradient(to right, var(--colorBtn1) 0%, var(--colorBtn2) 51%, var(--colorBtn1) 100%);
     background-size: 200%;
     border: 1px solid transparent;
     padding: 20px 40px;
@@ -512,7 +490,7 @@ header {
     opacity: 0.7;
 }
 
-.portfolio__icon i {
+/* .portfolio__icon i {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -528,7 +506,7 @@ header {
     transform: translate(20px, -20px);
     transition: all 0.75s;
     opacity: 0;
-}
+} */
 
 .portfolio__item .portfolio__icon i:hover {
     background-position: right center;
@@ -581,7 +559,7 @@ header {
 }
 
 .services__item {
-    color: #ffffff;
+    color: var(--bgColor);
     padding: 30px 30px;
     backdrop-filter: blur(3px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -593,11 +571,11 @@ header {
 
 .services__item:hover {
     background: var(--colorSecondary);
-    border-color: #ffffff;
+    border-color: var(--bgColor);
 }
 
 .services__item:hover ion-icon {
-    color: #1a1d2d;
+    color: var(--colorTitleH2);
     transition: all 0.5s;
 }
 
@@ -614,11 +592,6 @@ header {
     position: relative;
 }
 
-.services__item i {
-    font-size: 50px;
-    color: #35a22c;
-}
-
 .services__item h3 {
     font-size: 25px;
     margin: 0;
@@ -627,11 +600,10 @@ header {
 .services__item p {
     font-size: 18px;
     text-align: justify;
-
 }
 
 .services .title p {
-    font-size: 18px;
+    /* font-size: 18px; */
     width: 80%;
     margin: auto;
 }
@@ -647,7 +619,7 @@ header {
 /* CONTACT */
 .contact {
     position: relative;
-    color: #585858;
+    color: var(--colorP);
 }
 
 .contact__bg {
@@ -675,7 +647,7 @@ header {
 .contact__item h2 {
     font-size: 36px;
     line-height: 42px;
-    color: #1a1d2d;
+    color: var(--colorTitleH2);
     font-weight: 600;
 }
 
@@ -851,45 +823,14 @@ footer {
 .aboutUs .img img {
     width: 100%;
     max-height: 450px;
-    /* max-width: 500px; */
     background-size: auto;
     background-position: center;
     border-radius: 10px;
-    /* object-fit: cover; */
     display: block;
 }
 
 .aboutUs .content__right {
     position: relative;
-}
-
-.aboutUs .content__right .since {
-    background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
-    position: absolute;
-    bottom: 0px;
-    background: #1f2b7b;
-    padding: 35px 28px;
-    border-radius: 5px;
-    left: -80px;
-    text-align: center !important;
-
-}
-
-
-.aboutUs .content__right .since span {
-    color: #fff;
-    line-height: 1;
-    margin: 0;
-    font-size: 20px;
-}
-
-.aboutUs .content__right .since p {
-    font-size: 60px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: "Muli", sans-serif;
-    line-height: 1.2;
 }
 
 .aboutUs .inner {
@@ -908,7 +849,7 @@ footer {
     border-bottom-left-radius: 40px;
     text-align: center;
     color: var(--bgColor);
-    background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+    background-image: linear-gradient(to right, var(--colorBtn1) 0%, var(--colorBtn2) 51%, var(--colorBtn1) 100%);
 
 }
 
@@ -1201,8 +1142,8 @@ footer {
         /* Giảm kích thước tiêu đề */
     }
 
-    .title p {
-        font-size: 16px;
+    .services .title p {
+        font-size: 20px;
     }
 
     .projects__content .nav-link {
@@ -1215,13 +1156,13 @@ footer {
     }
 
     .about-image-wrapper img {
-        width: 300px;
-        height: 300px;
+        width: 330px;
+        height: 330px;
     }
 
     .red-blob {
-        width: 320px;
-        height: 320px;
+        width: 350px;
+        height: 350px;
     }
 
     .about a button {
@@ -1256,9 +1197,9 @@ footer {
         font-size: 20px;
     }
 
-    .services__item p {
-        font-size: 16px;
-    }
+    /* .services__item p {
+        font-size: 18px;
+    } */
 
     .services .register {
         position: absolute;
@@ -1352,13 +1293,16 @@ footer {
         width: auto;
     }
 
+
+
     /* Banner */
     .banner {
         height: 30vh;
     }
 
     .banner .title h2 {
-        font-size: 36px;
+        font-size: 40px;
+        top: 63%;
     }
 
     /* Section About Us */
