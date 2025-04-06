@@ -667,7 +667,7 @@ footer {
 }
 
 .footer__content h3 {
-    font-size: 20px;
+    font-size: 30px;
     line-height: 26px;
     font-weight: 600;
     margin-bottom: 25px;
@@ -822,11 +822,18 @@ footer {
 
 .aboutUs .img img {
     width: 100%;
-    max-height: 450px;
-    background-size: auto;
+    height: 450px;
+    /* background-size: auto; */
     background-position: center;
     border-radius: 10px;
     display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.aboutUs .img {
+    width: 100%;
+    max-height: 450px;
 }
 
 .aboutUs .content__right {
@@ -1229,7 +1236,7 @@ footer {
 
     /* Footer */
     .footer__content h3 {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .mail {
