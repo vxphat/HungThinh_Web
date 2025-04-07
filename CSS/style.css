@@ -1040,7 +1040,7 @@ footer {
 
     /* Footer */
     .footer__content {
-        text-align: center;
+        text-align: start;
     }
 
     .footer__support,
@@ -1236,7 +1236,7 @@ footer {
 
     /* Footer */
     .footer__content h3 {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .mail {
